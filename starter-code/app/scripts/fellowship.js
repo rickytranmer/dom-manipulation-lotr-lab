@@ -205,13 +205,13 @@ function forgeTheFellowShip() {
   for (i=0; i<hobbits.length; i++) {
     rivHobbits.removeChild(listHobbits[i]);
     theFellowship.firstChild.appendChild(listHobbits[i]);
-    //alert(listHobbits[i].innerText + " has joined your party!");
+    alert(listHobbits[i].innerText + " has joined your party!");
   }
   //buddies
   for (i=0; i<buddies.length; i++) {
     rivBuddies.removeChild(listBuddies[i]);
     theFellowship.firstChild.appendChild(listBuddies[i]);
-    //alert(listBuddies[i].innerText + " has joined your party!");
+    alert(listBuddies[i].innerText + " has joined your party!");
   }
 
   console.log(theFellowship);
