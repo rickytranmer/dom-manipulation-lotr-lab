@@ -93,7 +93,20 @@ var keepItSecretKeepItSafe = function() {
   newRing.setAttribute('class', 'magic-imbued-jewelry')
 
   // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
-  newRing.addEventListener('click', function() { nazgulScreech(); });
+  newRing.addEventListener('click', function() {
+    nazgulScreech();
+    totalClicks++;
+    if (totalClicks >= 3) {
+      body.style.visibility = "hidden";
+      var newBody = document.createElement('body');
+      document.querySelector('html').appendChild(newBody);
+      var failure = document.createElement('h2');
+      failure.innerHTML = "The Ring has been returned to Sauron and the world is over.";
+      newBody.appendChild(failure);
+      console.log(newBody);
+      console.log(failure);
+    }
+  });
 
   // add the ring as a child of Frodo
   var frodo = document.getElementById('frodo');
@@ -325,4 +338,6 @@ function thereAndBackAgain() {
   }
 }
 
-thereAndBackAgain();
+//thereAndBackAgain();
+
+// Bonus 1
